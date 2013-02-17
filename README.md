@@ -85,11 +85,14 @@ _Note that these settings are globals to every function call, and they may preju
 
 ### Query types
 
-**ready** hooks got parsed automatically on DOM Ready. Hooks added after DOM Ready are parsed right away. They accept CSS selector as query string.
+**ready**  
+hooks got parsed automatically on DOM Ready. Hooks added after DOM Ready are parsed right away. They accept CSS selector as query string.
 
-**html** hooks got parsed as soon as they are added, since the `html` element always exists before the DOM is ready. They accept a single class name as query string (use [.hasClass](http://api.jquery.com/hasClass/) internally).
+**html**  
+hooks got parsed as soon as they are added, since the `html` element always exists before the DOM is ready. They accept a single class name as query string (use [.hasClass](http://api.jquery.com/hasClass/) internally).
 
-**available** hooks got parsed as soon as they are added and try to match a DOM element _BEFORE_ the DOM is ready. They work very similarly to the [available event in YUI](http://yuilibrary.com/yui/docs/event/domready.html#available), by polling the DOM for a given element at regular intervals. If the query isn't matched they fail silently. _Since these hooks are expensive in terms of performances, use them sparingly._
+**available**  
+hooks got parsed as soon as they are added and try to match a DOM element _BEFORE_ the DOM is ready. They work very similarly to the [available event in YUI](http://yuilibrary.com/yui/docs/event/domready.html#available), by polling the DOM for a given element at regular intervals. If the query isn't matched they fail silently. _Since these hooks are expensive in terms of performances, use them sparingly._
 
 ## Release History
 
