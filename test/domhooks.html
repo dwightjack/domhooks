@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="is-html">
+<head>
+  <meta charset="utf-8">
+  <title>Domhooks Test Suite</title>
+  <!-- Load local jQuery. This can be overridden with a ?jquery=___ param. -->
+  <script src="../libs/jquery/jquery-1.9.1.js"></script>
+  <!-- Load local QUnit (grunt requires v1.0.0 or newer). -->
+  <link rel="stylesheet" href="../libs/qunit/qunit.css" media="screen">
+  <script src="../libs/qunit/qunit.js"></script>
+  <script src="../libs/sinon/sinon-1.4.2.js"></script>
+  <!--[if IE]>
+      <script src="../libs/sinon/sinon-ie-1.4.2.js"></script>
+    <![endif]-->
+  <!-- Load local lib and tests. -->
+  <script src="../src/domhooks.js"></script>
+  <script src="domhooks_test.js"></script>
+  <!-- Removing access to jQuery and $. But it'll still be available as _$, if
+       you REALLY want to mess around with jQuery in the console. REMEMBER WE
+       ARE TESTING YOUR PLUGIN HERE -->
+  <script>window._$ = jQuery.noConflict(true);</script>
+</head>
+<body>
+  <h1 id="qunit-header">DOMHooks Test Suite</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">
+    <span id="is-available">awesome test markup</span>
+  </div>
+</body>
+</html>
