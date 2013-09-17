@@ -27,7 +27,14 @@ $.domHooks({
 ```
 
 ## Getting Started
-Download the [production version][min] or the [development version][max].
+
+Via [Bower](https://github.com/twitter/bower)...
+
+```
+bower install jquery.domhooks
+```
+
+... or download the [production version][min] or the [development version][max].
 
 [min]: https://raw.github.com/dwightjack/domhooks/master/dist/domhooks.min.js
 [max]: https://raw.github.com/dwightjack/domhooks/master/dist/domhooks.js
@@ -36,7 +43,7 @@ In your web page:
 
 ```html
 <script src="jquery.js"></script>
-<script src="domhooks.min.js"></script>
+<script src="/path/to/domhooks.min.js"></script>
 <script>
 	//no need to wrap in a DOMReady function!
 	$.domHooks(/* args... */);
