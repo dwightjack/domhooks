@@ -106,5 +106,6 @@ hooks got parsed as soon as they are added and try to match a DOM element _BEFOR
 
 ## Release History
 
+* 0.1.2 Added [Bower](https://github.com/twitter/bower) support
 * 0.1.1 Bugfixes
 * 0.1.0b Initial release

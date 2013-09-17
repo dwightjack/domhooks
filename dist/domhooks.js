@@ -1,4 +1,4 @@
-/*! DOMHooks - v0.1.1 - 2013-09-17
+/*! DOMHooks - v0.1.2 - 2013-09-17
 * https://github.com/dwightjack/domhooks
 * Copyright (c) 2013 Marco "DWJ" Solazzi; Licensed MIT */
 (function($, document) {
