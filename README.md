@@ -76,10 +76,13 @@ $.domHook({ '#foo': function () { /* ... */} });
 
 ### Settings
 
+**Breaking changes!!!**  
+**Up to v0.1.0b `.pollsMax` and `.pollsInterval` where called `.polls_max` and `.polls_interval`.**
+
 `$.domHooks` exposes also two options used by the `'available'` hook type:
 
-* `$.domHooks.polls_max`: The number of polls after which the hook gets discarted (defaults to `40`)
-* `$.domHooks.polls_interval`: The interval in ms between each poll (defaults to `25`)
+* `$.domHooks.settings.pollsMax`: The number of polls after which the hook gets discarted (defaults to `40`)
+* `$.domHooks.settings.pollsInterval`: The interval in ms between each poll (defaults to `25`)
 
 _Note that these settings are globals to every function call, and they may prejudice the overall performances of the page._
 
@@ -96,4 +99,5 @@ hooks got parsed as soon as they are added and try to match a DOM element _BEFOR
 
 ## Release History
 
+* 0.1.1 Bugfixes
 * 0.1.0b Initial release

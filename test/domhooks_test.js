@@ -1,6 +1,4 @@
-/*global jQuery:true, sinon:true, QUnit:false, module:false, test:false, asyncTest:false, expect:false*/
-/*global start:false, stop:false ok:false, equal:false, notEqual:false, deepEqual:false*/
-/*global notDeepEqual:false, strictEqual:false, notStrictEqual:false, raises:false*/
+/*global sinon:true, QUnit, module, ok, test, asyncTest, start, equal */
 QUnit.config.reorder = false;
 jQuery.holdReady(true);
 
@@ -25,8 +23,8 @@ jQuery.holdReady(true);
       raises(block, [expected], [message])
   */
 
- var readySpy = sinon.spy();
- jQuery(readySpy);
+  var readySpy = sinon.spy();
+  jQuery(readySpy);
 
   module('jQuery#domHooks');
 
@@ -35,12 +33,12 @@ jQuery.holdReady(true);
 
     $.domHooks('html', 'is-html', spy);
     //this is called right away
-    ok(spy.calledWith('is-html'), "First argument is the class name string");
-    ok(spy.getCall(0).args[1].is('html'), "Second argument is the html element");
+    ok(spy.calledWith('is-html'), 'First argument is the class name string');
+    ok(spy.getCall(0).args[1].is('html'), 'Second argument is the html element');
 
     //fail this
     $.domHooks('html', 'not-in-html', spy);
-    ok(spy.calledOnce, "Silently fails if query is not found");
+    ok(spy.calledOnce, 'Silently fails if query is not found');
 
   });
 
@@ -48,23 +46,23 @@ jQuery.holdReady(true);
 
     var availSpy = sinon.spy();
 
-    $.domHooks('available', '#is-available', function (s, $el) {
+    $.domHooks('available', '#is-available', function(s, $el) {
       availSpy();
-      //still has the "holdready we set"
-      ok(availSpy.calledBefore(readySpy), "Runs before DOM ready");
-      equal(s, '#is-available', "First argument is the selector");
-      ok($el.is('#is-available'), "Second argument is the matched element");
+      //still has the 'holdready we set'
+      ok(availSpy.calledBefore(readySpy), 'Runs before DOM ready');
+      equal(s, '#is-available', 'First argument is the selector');
+      ok($el.is('#is-available'), 'Second argument is the matched element');
       start();
     });
 
   });
 
-  asyncTest('ready hook type', function () {
+  asyncTest('ready hook type', function() {
 
-    $.domHooks('ready', '#is-available', function (s, $el) {
-      ok($.isReady, "Runs after DOM ready");
-      equal(s, '#is-available', "First argument is the selector");
-      ok($el.is('#is-available'), "Second argument is the matched element");
+    $.domHooks('ready', '#is-available', function(s, $el) {
+      ok($.isReady, 'Runs after DOM ready');
+      equal(s, '#is-available', 'First argument is the selector');
+      ok($el.is('#is-available'), 'Second argument is the matched element');
       start();
     });
     $.holdReady(false);

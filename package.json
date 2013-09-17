@@ -1,13 +1,41 @@
 {
-  "name": "jquery-plugin",
-  "version": "0.0.0-ignored",
+  "name": "domhooks",
+  "title": "DOMHooks",
+  "description": "Hooks functions' execution to DOM queries",
+  "version": "0.1.1",
+  "homepage": "https://github.com/dwightjack/domhooks",
+  "author": {
+    "name": "Marco \"DWJ\" Solazzi",
+    "url": "https://github.com/dwightjack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dwightjack/domhooks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dwightjack/domhooks/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/dwightjack/domhooks/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
   "engines": {
-    "node": ">= 0.6.0"
+    "node": ">=0.10.0"
   },
-  "scripts": {
-    "test": "grunt qunit"
-  },
+  "keywords": [
+    "jquery"
+  ],
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.3.17"
+    "grunt": "~0.4.1",
+    "grunt-contrib-qunit": "~0.2.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-clean": "~0.5.0"
   }
 }
