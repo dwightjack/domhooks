@@ -2,7 +2,7 @@
   "name": "domhooks",
   "title": "DOMHooks",
   "description": "Hooks functions' execution to DOM queries",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/dwightjack/domhooks",
   "author": {
     "name": "Marco \"DWJ\" Solazzi",

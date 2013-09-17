@@ -1,0 +1,22 @@
+{
+  "name": "jquery.domhooks",
+  "version": "0.1.2",
+  "homepage": "https://github.com/dwightjack/domhooks",
+  "authors": [
+    "Marco Solazzi <marco.solazzi@gmail.com>"
+  ],
+  "description": "Hooks functions' execution to DOM queries",
+  "main": "dist/domhooks.js",
+  "keywords": [
+    "jquery",
+    "DOM"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
