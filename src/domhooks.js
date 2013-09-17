@@ -134,7 +134,7 @@
       });
 
 
-      if (dfd.notify().state() === 'pending') {
+      if (dfd.state() === 'pending') {
         poll = setInterval(dfd.notify, _domHooks.settings.polls_interval);
       }
     }
